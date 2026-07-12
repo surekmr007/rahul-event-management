@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" data-theme="dark" data-theme-mode="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The StoryBook — Event Management Studio</title>
+    <meta name="description" content="The StoryBook is a luxury event management studio crafting unforgettable experiences through meticulous design and flawless execution." />
+    <meta property="og:title" content="The StoryBook — Event Management Studio" />
+    <meta property="og:description" content="Luxury event management studio crafting unforgettable experiences." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <style>
+      html { visibility: hidden; }
+      html.wf-active, html.wf-inactive { visibility: visible; }
+    </style>
+    <script>
+      (function () {
+        var stored = localStorage.getItem('theme');
+        var mode = stored || 'dark';
+        var resolved = mode === 'system'
+          ? (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark')
+          : mode;
+        document.documentElement.setAttribute('data-theme', resolved);
+        document.documentElement.setAttribute('data-theme-mode', mode);
+        setTimeout(function () {
+          document.documentElement.classList.add('wf-inactive');
+        }, 2000);
+      })();
+    </script>
+    <script type="module" crossorigin src="/rahul-event-management/assets/index-1_u6BIqr.js"></script>
+    <link rel="stylesheet" crossorigin href="/rahul-event-management/assets/index-tHxQ-v6l.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
